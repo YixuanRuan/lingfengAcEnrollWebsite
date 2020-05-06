@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="homePage.css"/>
+    <script type="text/javascript" src="homePage.js"></script>
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+	<script src="jQuery/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4/js/bootstrap.min.js"></script>
+    <title>凌峰社</title>
+  </head>
+  
+  <body>
+  <div class="container">
+  	<div class="row">
+  		<nav class="navbar navbar-expand-sm">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+			  <a class="nav-link" href="findAc/findAc.html">寻找活动</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="lfInfo/lfCenter.html">凌峰Center</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="userCenter/userInfo/userInfo.html">个人中心</a>
+			</li>
+		  </ul>
+		</nav>
+  	</div>
+  	<div class="row" id="acBody">
+	  	<div class="col" id="acJoinCol">
+	  		<ul class="list-group" id="acJoin">
+	  		<h2>报名的活动</h2>
+	  		</ul>
+	  	</div>
+	</div>
+	<script> getAcJoin()</script>
+    <div id="footer">
+		联系管理员:18569402593(微信+手机)
+    </div>
+	<script>
+  $(document).ready(function(){
+	  var phone=localStorage.getItem("phone");
+	$.get("getAcJoin.php?phone="+phone,function(data){
+		var Ids=JSON.parse(data);
+		var x;
+		for(x in Ids){
+			$.get("findAc/joinAc/getAcDetail.php?eventId="+Ids[''+x],function(data){
+				var response=JSON.parse(data);
+				$("#acJoin").append("<li onclick='opAcJoined("+response['eventId']+
+									")  ' > 地点：  "+response['location']+
+									" 时间： "+response['timeStart']+
+									" - "+response['timeEnd']+
+									"</li>");
+			})
+		}
+	});
+  })  
+  	</script>
+  </div>	
+</body>
+ </html>
+

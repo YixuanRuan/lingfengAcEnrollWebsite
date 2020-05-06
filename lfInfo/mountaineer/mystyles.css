@@ -1,0 +1,102 @@
+html{
+	background-color:#e6f4f8;
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+}
+
+body{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header{
+	width:100%;
+	height:100px;
+}
+
+#theme{
+	width:80%;
+	display: inline-block;
+	float:left;
+	color:#143DD1;
+	text-align: center;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px #74aafc;
+	font-size: 50px;
+	font-style: italic;
+}
+
+.navBack{
+	border:2px solid white;
+	width:20%;
+	display: inline-block;
+	float:right;
+	margin-top: 50px;
+	width:80px;
+	height:40px;
+	border-radius: 10px;
+	vertical-align:middle;
+	color: white;
+	font-style:italic;
+	background:rgba(8,67,164,1.00);
+}
+
+.fourSisters{
+	background-image: url(images/fourSisters.jpg);
+}
+
+.cholaMountain{
+	background-image: url(images/cholaMountain.jpg);
+}
+
+.mountain{
+	padding-top: 25px;
+	padding-left: 100px;
+	width: 100%;
+	height:700px;
+	background-size: cover;
+	color:rgba(255,255,255,1.00);
+	text-decoration: underline;
+	font-style: italic;
+	text-align: left;
+}
+
+.team{
+	opacity: 0.5;
+}
+
+.color{
+	color: white;
+	text-decoration: underline;
+}
+
+.fourSisters img {
+	width:100%;
+}
+
+@media (min-width: 768px){
+	
+	body {
+
+		max-width: 768px;
+	}
+	
+	
+}
+
+@media (min-width:1024px){
+	
+	body {
+		max-width: 1200px;
+		}
+	
+	#theme{
+		float:left;
+		text-align: left;
+	}
+	
+	.navBack{
+		float:right;
+	}
+	
+	
+}

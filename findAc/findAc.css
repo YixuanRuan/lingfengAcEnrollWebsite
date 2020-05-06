@@ -1,0 +1,21 @@
+/* Global */
+html body{
+	background-color:  rgba(17,169,197,1.00);
+}
+
+
+
+#headImage{
+	margin-top: 10px;
+	width:400px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:"annie-use-your-telescope";
+	color:aliceblue;
+	font-size: 4em;
+}
+
+.list-group-item{
+	color: #11A9C5;
+	margin-top: 10px;
+}

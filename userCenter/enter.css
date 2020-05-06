@@ -1,0 +1,213 @@
+/* Global */
+html body{
+	background-color:  rgba(17,169,197,1.00);
+}
+
+.nav-item{
+	color: white;
+}
+
+/* The main div padding-top */
+.signup{
+	padding-top:50px;
+}
+
+.lauchAc{
+	padding-top:50px;
+}
+
+/* The image UI */
+.col-lg-8{
+	padding-top:100px;
+}
+
+img{
+	width:100%;
+}
+
+/* The register UI */
+#signupDiv{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* The form UI */ 
+.loginForm{
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#signUpForm{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.register{
+	margin-top: 5px;
+	text-decoration: underline;
+	text-align: center;
+}
+
+#lauchAcForm{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-inline{
+	margin-bottom: 10px;
+}
+
+.btn{
+	width:200px;
+}
+
+/* Login UI */
+#loginDiv{
+	margin-top: 50px;
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#loginBtnDiv{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* AcDetail UI */
+#acDetail{
+	width:360px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+}
+
+.cap{
+	font-size: 1.5em;
+	margin-top: 10px;
+	font-weight: 500;
+}
+
+#detailInfo{
+	color:burlywood;
+}
+
+#joinAcBtn{
+	margin-top: 30px;
+	margin-left: 40px;
+	background-color: rgba(17,169,197,1.00);
+	border:1px solid;
+}
+
+#cancelAcJoinBtn{
+	margin-top: 30px;
+	margin-left: 40px;
+	background-color: rgba(17,169,197,1.00);
+	border:1px solid;
+	color: red;
+}
+
+/* AcJoinedMembersOpPage UI */
+.acJoinedMembersImg{
+	margin-top: 200px;
+}
+
+#acMembersHead{
+	color: white;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#acMembers{
+	list-style-type: none;
+	color: white;
+}
+
+.acMembersDetail{
+	padding:10px;
+	border: 1px groove white;
+	margin-top: 5px;
+}
+
+#cancelAcLauchBtn{
+	width:200px;
+	background-color: rgba(17,169,197,1.00);
+	border:1px solid;
+	color: red;
+}
+
+#cancelAcLauchBtnDiv{
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	width:200px;
+}
+
+/* UserCenter's UserInfo UI */
+#userInfoDiv{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+#uploadParentDiv{
+	text-align: center;
+}
+*/
+#browseFile{
+	color: aqua;
+	background: rgba(17,169,197,1.00);
+}
+
+#uploadPhotoDiv{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*
+#setUserInfoDiv{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+#setUserInfoBtn{
+	background-color: rgba(17,169,197,1.00);
+	color:white;
+	border: 1px solid white;
+}
+
+/* UserCenter's SetUserInfo UI */
+#setUserInfoDiv{
+	width:360px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#setUserInfoBtnDiv{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+#setUserInfoHead{
+	color:white;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.setUserInfoImg{
+	padding-top: 200px;
+}

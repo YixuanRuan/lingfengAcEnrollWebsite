@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户注册</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../enter.css">
+<link rel="stylesheet" href="../../bootstrap-4/css/bootstrap.min.css">
+<script src="../../jQuery/jquery-3.3.1.min.js"></script>
+<script src="../../bootstrap-4/js/bootstrap.min.js"></script>
+<script src="register.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-8 d-none d-sm-block"><img src="../../images/lfLogo-经典背景.jpg" ></div>
+			<div class="col-lg-2" id="signupDiv">
+				<form action="register.php" method="post" id="signUpForm" >
+					<h2>加入凌峰！</h2>
+					<div class="form-inline" id="phoneDiv">
+						<label for="phone">手机号：</label>
+						<input type="text" class="form-control" id="phone" placeholder="Enter 11 digit phone number" name="phone" autofocus>
+					</div>
+					<div class="form-inline" id="pwdDiv">
+						<label for="pwd">密码：</label>
+						<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+					</div>
+					<div class="form-inline" id="nicknameDiv">
+						<label for="nickname">昵称：</label>
+						<input type="text" class="form-control" id="nickname" placeholder="Enter nickname" name="nickname">
+					</div>
+					<div class="form-inline" id="realnameDiv">
+						<label for="realname">姓名：</label>
+						<input type="text" class="form-control" id="realname" placeholder="Enter realname" name="realname">
+					</div>
+					<div class="form-inline" id="emailDiv">
+						<label for="email">Email：</label>
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
+					</div>
+					<div class="form-inline" id="studentNumDiv">
+						<label for="stuNum">学号：</label>
+						<input type="text" class="form-control" id="stuNum" placeholder="Enter studentNum" name="studentNum" >
+						<div>（非本校学生请使用00000000）</div>
+					</div>
+					<div class="form-inline">性别：
+						<input type="radio" class="form-check-input" value="male" id="male" name="gender" checked>男
+						<input type="radio" class="form-check-input" value="female" id="female" name="gender">女
+					</div>
+					<div class="form-inline" id="enrollDiv">
+						<label for="enroll">入学年份：</label>
+						<input type="text" class="form-control" id="enroll" placeholder="For example:2017" name="enroll" >
+					</div>
+					<div class="form-inline">
+						<label for="auth">权限码：</label>
+						<input type="text" class="form-control" id="auth" placeholder="没有可以空着" name="auth">
+					</div>
+					<button type="submit" class="btn btn-primary">提交</button>
+				</form>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+	</div>
+</body>
+</html>

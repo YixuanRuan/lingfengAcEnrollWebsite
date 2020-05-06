@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>活动发布</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../userCenter/enter.css">
+<link rel="stylesheet" href="../bootstrap-4/css/bootstrap.min.css">
+<script src="../jQuery/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap-4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lauchAc.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-2 col-sm-12 lauchAc">
+			<form action="lauchAc.php" method="post" id="lauchAcForm" >
+					<h2>发起活动</h2>
+					<div class="form-inline" id="laucherDiv">
+						<label for="laucher">姓 名：</label>
+						<input type="text" class="form-control" id="laucher" placeholder="Enter realname" name="laucher" autofocus>
+					</div>
+					<div class="form-inline" id="phoneDiv">
+						<label for="phone">联系电话：</label>
+						<input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
+					</div>
+					<div class="form-inline" id="enrollDiv">
+						<label for="enroll">入学年份：</label>
+						<input type="text" class="form-control" id="enroll" placeholder="输入入学年份" name="enroll">
+					</div>
+					<div class="form-inline" id="locationDiv">
+						<label for="location">活动地点：</label>
+						<input type="text" class="form-control" id="location" placeholder="Enter activity location" name="location">
+					</div>
+					<div class="form-inline" id="timeStartDiv">
+						活动开始时间：
+						<input type="text" class="form-control" id="datapicker" placeholder="Enter start date" name="timeStart" >
+					</div>
+					<div class="form-inline" id="timeEndDiv">
+						活动结束时间：
+						<input type="text" class="form-control" id="datepicker" placeholder="Enter end date" name="timeEnd" >
+					</div>
+					<div class="form-inline" id="budgetDiv">
+						<label for="budget">预 算：</label>
+						<input type="text" class="form-control" id="budget" placeholder="Estimated money" name="budget" >
+					</div>
+					<div class="form-inline" id="numDiv">
+						<label for="num">人 数：</label>
+						<input type="text" class="form-control" id="num" placeholder="(可以填不限)" name="num" >
+					</div>
+					<div class="form-inline" id="watchoutDiv">
+						<label for="watchout">注意事项：</label>
+						<textarea class="form-control" id="watchout" placeholder="填写特别需要注意的地方" row="5" cols="100" name="watchout"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary" id="btn">提交</button>
+				</form> 
+			</div>
+			<div class="col-lg-8"><img src="../../images/lfLogo-经典背景.jpg" id="image"></div>
+		</div>
+	</div>
+</body>
+</html>
+
+

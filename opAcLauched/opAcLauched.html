@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理发布的活动</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../userCenter/enter.css">
+<script src="opAcLauched.js"></script>
+<link rel="stylesheet" href="../bootstrap-4/css/bootstrap.min.css">
+<script src="../jQuery/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap-4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-3 acJoinedMembersImg d-none d-md-block"><img src="../../images/lfLogo-经典背景.jpg" ></div>
+			<div class="col-lg-6">
+				<h2 id="acMembersHead">活动人员名单</h2>
+				<ul id="acMembers">
+					
+				</ul>
+				<div id="cancelAcLauchBtnDiv"><button id="cancelAcLauchBtn">取消活动</button></div>
+			</div>
+			<div class="col-lg-3 acJoinedMembersImg d-none d-md-block"><img src="../../images/lfLogo-经典背景.jpg" ></div>
+		</div>
+	</div>
+	<script>
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+}
+
+var eventId=getUrlParameter('eventId');
+
+$(document).ready(function(){
+	$.get("getAcMembersPhone.php?eventId="+eventId,function(data){
+		var x;
+		var ac=JSON.parse(data);
+		for(x in ac){
+			$("#acMembers").append("<li class='acMembersDetail' id='"+ac[''+x]+"'> 手机号："+
+								   ac[''+x]+"</li>");
+			(function(t){
+			$.get("getAcMembersDetail.php?phone="+t,function(data){
+				var info=JSON.parse(data);
+			$("#"+t).append("<span> 姓名："+
+				info.name+" 性别："+(info.gender==="male"?"男":"女")+
+				" 入学年份："+info.enroll+" 学号: "+
+				info.studentNum+"</span>");});
+			})(ac[''+x]);
+		};
+	});
+
+});
+		
+$("#cancelAcLauchBtn").click(function(){
+	$.get("getAcMembersPhone.php?eventId="+eventId,function(data){
+		var x;
+		var ac=JSON.parse(data);
+		for(x in ac){
+			$.get("deleteAcFromJ.php?phone="+ac[''+x]+
+				  "&eventId="+eventId);
+		}
+	});
+	
+	$.get("deleteAcFromLA.php?phone="+localStorage.getItem('phone')+
+				  "&eventId="+eventId);
+	
+	location.href="../homePage1.html";
+});
+		
+		
+	</script>
+</body>
+</html>

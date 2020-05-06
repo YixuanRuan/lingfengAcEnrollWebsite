@@ -1,0 +1,49 @@
+/* GLOBSL */
+html body{
+	background-color:  rgba(17,169,197,1.00);
+}
+
+/* Nav UI */
+.nav-item{
+	float: left;
+}
+.nav-link{
+	color: white;
+	float:left;
+}
+
+/* Body UI */
+li{
+	color: white;
+	border:1px solid white;
+	margin-top: 10px;
+	list-style-type: none;
+	padding: 5px 10px;
+}
+
+li:hover{
+	color:#0751E6;
+}
+
+ul h2{
+	color:white;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#acBody{
+	height:600px;
+	background-image: url("images/lfLogo-经典背景.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+/* Footer UI */
+#footer{
+	margin-top: 20px;
+	color: white;
+	border:1px solid white;
+	padding: 15px;
+}
